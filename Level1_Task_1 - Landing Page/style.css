@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+:root{
+    --bg-color:#313f58;
+    --second-bg-color: #70809e;
+    --text-color: #fff;
+    --main-color: indianred;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url('images/bg.jpg');
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-bottom: 2px solid indianred;
+    transition: 0.4s linear; 
+}
+
+.menu a:hover::before{
+    width: 90%;
+}
+
+.register a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: indianred;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.register a:hover{
+    background: transparent;
+    border: 1px solid indianred;
+}
+
+.h-txt{
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.h-txt span{
+    letter-spacing: 5px;
+}
+
+.h-txt h1{
+    font-size: 3.5em;
+}
+
+.h-txt a{
+    text-decoration: none;
+    background: indianred;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+}
+
+.h-txt a:hover{
+    background: transparent;
+    border: 1px solid indianred;
+}
+
+.oursites{
+    background: var(--bg-color);
+}
+
+.heads{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.welcome-description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+.site{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hillstation{
+    background: var(--second-bg-color);
+}
+
+.hill-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.hill-container .hill-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--second-bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.hill-box img{
+    width: 100%;
+    transition: .5s ease
+}
+
+.hill-box:hover img{
+    transform: scale(1.1);
+}
+
+.bestoffer{
+    background: var(--bg-color);
+}
+  
+  .offer-description {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .offer-price {
+    font-size: 32px;
+    color: #ff0000;
+    margin-bottom: 10px;
+  }
+  
+  .offer-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+.registers{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--second-bg-color);
+}
+
+.container{
+    background: var(--second-bg-color);
+}
+
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+span{
+    color: var(--main-color);
+}
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--bg-color);
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column-left {
+    width: calc(50%);
+}
+
+.contact .contact-content .text {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact .contact-content p {
+    font-size: 15px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contact .contact-content .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row i {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 1000;
+    font-size: 15px;
+}
+
+.contact .contact-content .info .sub-title {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+.contact .contact-content .column-right {
+    height: 400px;
+    margin-bottom: 400px;
+}
+
+iframe {
+    width: 640px;
+    height: 803px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    overflow-clip-margin: content-box !important;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    overflow: clip !important;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.footer-iconTop a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.footer-iconTop a:hover::before{
+    width: 100%;
+}
+
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+.footer-iconTop a:hover i{
+    color: var(--main-color);
+}
